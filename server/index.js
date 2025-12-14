@@ -5,6 +5,7 @@ const port = process.env.PORT || 3000;
 const connectDB = require('./config/dbconect');
 const cors = require('cors');
 const dotenv = require('dotenv');
+dotenv.config();
 
 connectDB();
 
