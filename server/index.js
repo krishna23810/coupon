@@ -15,8 +15,8 @@ app.get('/', (req, res) => {
 
 app.use(bodyParser.json());
 
-app.listen(port, () => {
-  console.log(`Coupon Service listening at http://localhost:${port}`);
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Coupon Service listening at http://0.0.0.0:${port}`);
 });
 
 const couponRoutes = require('./routes/couponRoutes');
