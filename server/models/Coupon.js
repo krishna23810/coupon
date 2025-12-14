@@ -35,7 +35,7 @@ const Coupon = new mongoose.Schema({
         type: Number,
         required: false
     },
-    
+
     User_based: {
         allowedUserTiers: {
             type: [String],

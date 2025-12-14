@@ -1,3 +1,6 @@
-# TODO List for Fixing MongoDB Connection Error
+# TODO: Fix Casing for userDetails Component
 
-- [ ] Edit `coupon/server/config/dbconect.js` to remove deprecated options `useNewUrlParser` and `useUnifiedTopology` from the `mongoose.connect` call.
+- [ ] Rename the file from `userDeatails.jsx` to `userDetails.jsx` to fix the typo.
+- [ ] Update the function name in `userDetails.jsx` to `UserDetails` (PascalCase).
+- [ ] Update the import in `App.jsx` to `UserDetails`.
+- [ ] Update the JSX usage in `App.jsx` to `<UserDetails />`.
