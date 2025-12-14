@@ -1,7 +1,7 @@
 const express = require('express');
 const Coupon = require('../models/Coupon');
 const userDetails = require('../models/userDetails');
-const Product = require('../models/Product');
+const Product = require('../models/product');
 
 exports.createCoupon = async (req, res) => {
     try {

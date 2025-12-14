@@ -1,7 +1,7 @@
 const Coupon = require('../models/Coupon');
 const userDetails = require('../models/userDetails');
 const User = require('../models/user');
-const Product = require('../models/Product');
+const Product = require('../models/product');
 
 exports.create_User_Details = async (req, res) => {
     try {
