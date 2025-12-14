@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: coupon-server
+    env: node
+    region: oregon
+    plan: starter
+    buildCommand: cd server && npm install
+    startCommand: cd server && npm start
+    envVars:
+      - key: MONGO_URI
+        value: ${MONGO_URI}
+      - key: FRONTEND_URL
+        value: ${FRONTEND_URL}
