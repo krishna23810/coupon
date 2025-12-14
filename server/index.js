@@ -29,9 +29,18 @@ app.use(cors({
     credentials: true,
 }));
 
-app.use('/coupon', couponRoutes);
-app.use('/user', userRoutes);
-app.use('/loginSignup', loginSignupRoutes);
-app.use('/product', productRoutes);
+app.get('/', (req, res) => {
+    res.json({
+        success: true,
+        message: 'Welcome to the E-commerce Coupon Management API',
+        version: '1.0.0',
+        documentation: '/api/docs'
+    });
+});
+
+app.use('/api/coupon', couponRoutes);
+app.use('/api/user', userRoutes);
+app.use('/api/loginSignup', loginSignupRoutes);
+app.use('/api/product', productRoutes);
 
 module.exports = app;
