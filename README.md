@@ -56,7 +56,6 @@ The app supports:
 git clone https://github.com/krishna23810/coupon.git
 cd coupon
 
-text
 
 ### 2. Install Dependencies
 
@@ -65,14 +64,12 @@ text
 from project root
 npm install
 
-text
 
 **Backend (Node + Express in /server):**
 
 cd server
 npm install
 
-text
 
 ### 3. Configure Environment Variables (Backend)
 
@@ -80,9 +77,8 @@ Inside the `server` folder, create a `.env` file:
 
 PORT=5000
 MONGODB_URI=your_mongodb_connection_string
+FRONTEND_URL =your_frontend_url
 
-add any other secrets like JWT_SECRET if required
-text
 
 You can use either a local Mongo URI (`mongodb://127.0.0.1:27017/coupon-db`)
 or a MongoDB Atlas URI.
@@ -94,36 +90,29 @@ npm start
 
 or, if you have a dev script:
 npm run dev
-text
+
 
 The API should be available on:
 
-http://localhost:5000
+http://localhost:3000
 
-text
 
 ### 5. Run the Frontend
 
-In a new terminal window:
+In a new terminal 
+window:cd coupon # project root
 
-cd coupon # project root
 npm run dev
 
-text
+Vite will start the React app on a port like:http://localhost:5173
 
-Vite will start the React app on a port like:
-
-http://localhost:5173
-
-text
-
-Make sure the frontend is calling the correct backend URL in your API helper (e.g. `http://localhost:5000` in development).
+Make sure the frontend is calling the correct backend URL in your API helper (e.g. `http://localhost:3000` in development).
 
 ---
 
 ## API Endpoints (Backend)
 
-Base URL (local): `http://localhost:5000`
+Base URL (local): `http://localhost:3000`
 
 | Method | Endpoint            | Description              |
 |--------|---------------------|--------------------------|
@@ -135,7 +124,6 @@ Base URL (local): `http://localhost:5000`
 | POST   | `/api/coupons/best` | Find best coupon for cart|
 
 *(Adjust the base path if your server uses `/coupon/...` instead of `/api/coupons/...`.)*
-
 ---
 
 ## Project Structure
@@ -157,9 +145,6 @@ coupon/
 │ └── package.json
 │
 └── README.md
-
-text
-
 ---
 
 ## Production Build & Deployment (Frontend)
@@ -167,8 +152,6 @@ text
 To build the frontend for production:
 
 npm run build
-
-text
 
 This runs `vite build` and outputs static files into the `dist` directory, which can be deployed to any static host (Vercel, Netlify, etc.).
 
@@ -185,8 +168,6 @@ For client‑side routing (React Router) on Vercel, add a `vercel.json` at the p
 { "source": "/(.*)", "destination": "/index.html" }
 ]
 }
-
-text
 
 This ensures all routes serve `index.html` and are handled by React Router in the browser.
 
