@@ -29,32 +29,3 @@ A full-stack Coupon Management System that helps users find the best coupon code
 ```bash
 git clone https://github.com/krishna23810/coupon.git
 cd coupon
-npm install
-cd server
-npm install
-
-#### To start frontend server
-cd coupon
-npm install
-
-
-#### To start backend serve
-cd server
-npm start
-# or
-node index.js
-# or 
-npm rundev
-
-
-
-Method	Endpoint	Description
-GET	/api/coupons	Get all coupons
-POST	/api/coupons	Create a new coupon
-GET	/api/coupons/:id	Get coupon by ID
-PUT	/api/coupons/:id	Update a coupon
-DELETE	/api/coupons/:id	Delete a coupon
-POST	/api/coupons/best	Find best coupon for cart
-
-
-
